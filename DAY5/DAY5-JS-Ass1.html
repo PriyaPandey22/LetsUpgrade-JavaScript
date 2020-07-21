@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1:
+        Write a program which does the following things:
+        1. Takes a positive number from the user.
+        2. Makes an array of numbers till the number given by user
+        3. Use higher order function to filter the odd numbers
+        4. Generate and array of the cubes of the filtered numbers</title>
+</head>
+<body>
+    <script>
+        function promptValidation(text) {
+            let n;
+            do {
+                n = prompt(text);
+
+                condition = (n == null) ? true : (n.trim().length == 0) ? true : false
+            } while (condition);
+            return n;
+        }
+
+        let n = parseInt(promptValidation("Enter a postive number n: "));
+
+        let arr = [];
+        for (let i = 1; i <= n; i++) {
+            arr[i - 1] = i;
+        }
+
+        console.log(arr);
+
+        //filtering the odd
+        let odd = arr.filter(el => el % 2 != 0);
+        console.log(odd);
+
+        //Cubing the filtered odd
+        let Cubes = odd.map(el => el ** 3);
+        console.log(Cubes);
+    </script>
+    
+</body>
+</html>
