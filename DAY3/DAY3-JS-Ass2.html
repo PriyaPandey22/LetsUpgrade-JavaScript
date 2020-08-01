@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Write a program which will take OS name and version from the user separated by a space. Then
+            log the OS name and version on the console.
+        </title>
+    </head>
+    <body>
+        <script>
+             function print_OSname(){
+                var OS_Name;
+                OS_Name=String(document.getElementById("ComputerOs").value);
+                var arr =  OS_Name.split(" ");
+                document.writeln("The OS name is: "+arr[0]+" and version is: " + arr[1]);
+            }
+        </script>
+        Enter OS name and Version separated by space :<input id="ComputerOs"><br />
+        <button onclick="print_OSname()">Click me</button>
+    </body>
+</html>
